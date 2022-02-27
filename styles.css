@@ -11,10 +11,10 @@ body {
 }
 
 h1 {
-    color: whitesmoke;
     font-size: 3.5rem;
-    text-align: center;
+    color: whitesmoke;
     border-bottom: 3px groove whitesmoke;
+    text-align: center;
 }
 .container {
     position: relative;
