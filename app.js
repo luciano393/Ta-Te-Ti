@@ -30,7 +30,7 @@ reset.addEventListener("click", resetAll)
 
 function win() {
     if(uno.textContent === dos.textContent && dos.textContent === tres.textContent  && tres.textContent !== "") {
-        if(turns % 2 === 0) {
+        if(uno.textContent === "O") {
             winner.textContent = "Player two win"
             endGame = true;
         } else {
@@ -38,7 +38,7 @@ function win() {
             endGame = true;
         }
     } else if (cuatro.textContent === cinco.textContent && seis.textContent === cuatro.textContent && cuatro.textContent !== "") {
-        if(turns % 2 === 0) {
+        if(cuatro.textContent === "O") {
             winner.textContent = "Player two win"
             endGame = true;
         } else {
@@ -46,7 +46,7 @@ function win() {
             endGame = true;
         }
     } else if (siete.textContent === ocho.textContent && nueve.textContent === siete.textContent  && siete.textContent !== "") {
-        if(turns % 2 === 0) {
+        if(siete.textContent === "O") {
             winner.textContent = "Player two win"
             endGame = true;
         } else {
@@ -54,7 +54,7 @@ function win() {
             endGame = true;
         }
     } else if (uno.textContent === cuatro.textContent && siete.textContent === uno.textContent  && uno.textContent !== "") {
-        if(turns % 2 === 0) {
+        if(uno.textContent === "O") {
             winner.textContent = "Player two win"
             endGame = true;
         } else {
@@ -62,7 +62,7 @@ function win() {
             endGame = true;
         }
     } else if (dos.textContent === cinco.textContent && ocho.textContent === dos.textContent  && dos.textContent !== "") {
-        if(turns % 2 === 0) {
+        if(dos.textContent === "O") {
             winner.textContent = "Player two win"
             endGame = true;
         } else {
@@ -70,7 +70,7 @@ function win() {
             endGame = true;
         }
     } else if (tres.textContent === seis.textContent && nueve.textContent === tres.textContent && tres.textContent !== "") {
-        if(turns % 2 === 0) {
+        if(tres.textContent === "O") {
             winner.textContent = "Player two win"
             endGame = true;
         } else {
@@ -78,7 +78,7 @@ function win() {
             endGame = true;
         }
     }  else if (uno.textContent === cinco.textContent && cinco.textContent === nueve.textContent && nueve.textContent !== "") {
-        if(turns % 2 === 0) {
+        if(uno.textContent === "O") {
             winner.textContent = "Player two win"
             endGame = true;
         } else {
@@ -86,7 +86,7 @@ function win() {
             endGame = true;
         }
     }  else if (siete.textContent === cinco.textContent && cinco.textContent === tres.textContent && tres.textContent !== "") {
-        if(turns % 2 === 0) {
+        if(siete.textContent === "O") {
             winner.textContent = "Player two win"
             endGame = true;
         } else {
@@ -94,9 +94,6 @@ function win() {
             endGame = true;
         }
     }
-    endGame ? setTimeout(() => {
-        resetAll()
-    }, 3000) : null;
 }
 
 function shoot(btn) {
@@ -111,9 +108,6 @@ function shoot(btn) {
                 win()
                 if(!endGame) {
                     winner.textContent = "Empate"
-                    setTimeout(() => {
-                        resetAll()
-                    }, 3000)
                 }
             }
         } else {
