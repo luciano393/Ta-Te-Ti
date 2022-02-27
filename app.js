@@ -2,10 +2,11 @@ const playerOne = "X";
 const playerTwo = "O";
 let turns = 0;
 let endGame = false;
+const pop = new Audio("pop.mp3")
 
 const one = document.getElementById("one");
 const two = document.getElementById("two");
-const three = document.getElementById("trhee");
+const three = document.getElementById("three");
 const four = document.getElementById("four");
 const five = document.getElementById("five");
 const six = document.getElementById("six");
@@ -29,64 +30,64 @@ nine.addEventListener("click", () => { shoot(nine) });
 reset.addEventListener("click", resetAll)
 
 function win() {
-    if(uno.textContent === dos.textContent && dos.textContent === tres.textContent  && tres.textContent !== "") {
-        if(uno.textContent === "O") {
+    if(one.textContent === two.textContent && two.textContent === three.textContent  && three.textContent !== "") {
+        if(one.textContent === "O") {
             winner.textContent = "Player two win"
             endGame = true;
         } else {
             winner.textContent = "Player one win"
             endGame = true;
         }
-    } else if (cuatro.textContent === cinco.textContent && seis.textContent === cuatro.textContent && cuatro.textContent !== "") {
-        if(cuatro.textContent === "O") {
+    } else if (four.textContent === five.textContent && six.textContent === four.textContent && four.textContent !== "") {
+        if(four.textContent === "O") {
             winner.textContent = "Player two win"
             endGame = true;
         } else {
             winner.textContent = "Player one win"
             endGame = true;
         }
-    } else if (siete.textContent === ocho.textContent && nueve.textContent === siete.textContent  && siete.textContent !== "") {
-        if(siete.textContent === "O") {
+    } else if (seven.textContent === eight.textContent && nine.textContent === seven.textContent  && seven.textContent !== "") {
+        if(seven.textContent === "O") {
             winner.textContent = "Player two win"
             endGame = true;
         } else {
             winner.textContent = "Player one win"
             endGame = true;
         }
-    } else if (uno.textContent === cuatro.textContent && siete.textContent === uno.textContent  && uno.textContent !== "") {
-        if(uno.textContent === "O") {
+    } else if (one.textContent === four.textContent && seven.textContent === one.textContent  && one.textContent !== "") {
+        if(one.textContent === "O") {
             winner.textContent = "Player two win"
             endGame = true;
         } else {
             winner.textContent = "Player one win"
             endGame = true;
         }
-    } else if (dos.textContent === cinco.textContent && ocho.textContent === dos.textContent  && dos.textContent !== "") {
-        if(dos.textContent === "O") {
+    } else if (two.textContent === five.textContent && eight.textContent === two.textContent  && two.textContent !== "") {
+        if(two.textContent === "O") {
             winner.textContent = "Player two win"
             endGame = true;
         } else {
             winner.textContent = "Player one win"
             endGame = true;
         }
-    } else if (tres.textContent === seis.textContent && nueve.textContent === tres.textContent && tres.textContent !== "") {
-        if(tres.textContent === "O") {
+    } else if (three.textContent === six.textContent && nine.textContent === three.textContent && three.textContent !== "") {
+        if(three.textContent === "O") {
             winner.textContent = "Player two win"
             endGame = true;
         } else {
             winner.textContent = "Player one win"
             endGame = true;
         }
-    }  else if (uno.textContent === cinco.textContent && cinco.textContent === nueve.textContent && nueve.textContent !== "") {
-        if(uno.textContent === "O") {
+    }  else if (one.textContent === five.textContent && five.textContent === nine.textContent && nine.textContent !== "") {
+        if(one.textContent === "O") {
             winner.textContent = "Player two win"
             endGame = true;
         } else {
             winner.textContent = "Player one win"
             endGame = true;
         }
-    }  else if (siete.textContent === cinco.textContent && cinco.textContent === tres.textContent && tres.textContent !== "") {
-        if(siete.textContent === "O") {
+    }  else if (seven.textContent === five.textContent && five.textContent === three.textContent && three.textContent !== "") {
+        if(seven.textContent === "O") {
             winner.textContent = "Player two win"
             endGame = true;
         } else {
@@ -102,8 +103,10 @@ function shoot(btn) {
             if(btn.textContent === "") {
                 if(turns % 2 === 0) {
                     btn.textContent = playerOne
+                    pop.play();
                 } else {
                     btn.textContent = playerTwo
+                    pop.play();
                 }
                 win()
                 if(!endGame) {
@@ -114,8 +117,10 @@ function shoot(btn) {
             if(btn.textContent === "") {
                 if(turns % 2 === 0) {
                     btn.textContent = playerOne
+                    pop.play();
                 } else {
                     btn.textContent = playerTwo
+                    pop.play();
                 }
                 turns += 1
                 win()

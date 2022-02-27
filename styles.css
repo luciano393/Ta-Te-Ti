@@ -10,6 +10,12 @@ body {
     font-size: 16px;
 }
 
+h1 {
+    color: whitesmoke;
+    font-size: 3.5rem;
+    text-align: center;
+    border-bottom: 3px groove whitesmoke;
+}
 .container {
     position: relative;
     display: flex;
@@ -24,17 +30,18 @@ body {
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    max-width: 21rem;
+    max-width: 18rem;
     justify-content: center;
+    margin: 2rem .5rem;
 }
 
 .btn {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 7rem;
-    width: 7rem;
-    font-size: 6rem;
+    height: 5rem;
+    width: 5rem;
+    font-size: 4rem;
     color: whitesmoke;
     background: transparent;
     outline: none;
@@ -58,23 +65,44 @@ body {
 
 #winner {
     color: whitesmoke;
-    font-size: 4rem;
-    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    margin: 1rem;
     height: 5rem;
+    text-align: center;
 }
 
 .players {
-    position: fixed;
-    left: 2rem;
-    z-index: 1;
-    top: 38%;
+    text-align: center;
+    background-color: #333333;
     padding: 2rem;
     color: whitesmoke;
 }
 
+@media (min-width: 900px) {
+    h1 {
+        position: fixed;
+        left: 2rem;
+        top: 1rem;
+    }
+
+    .players {
+        position: fixed;
+        left: 2rem;
+        top: 40%;
+    }
+    .btn {
+        width: 6rem;
+        height: 6rem;
+    }
+
+    .table, .winner {
+        margin: 1rem;
+    }
+}
+
 .players li {
     list-style: none;
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 #one, #two, #three, #four, #five, #six {
