@@ -3,29 +3,29 @@ const playerTwo = "O";
 let turns = 0;
 let endGame = false;
 
-const uno = document.getElementById("uno");
-const dos = document.getElementById("dos");
-const tres = document.getElementById("tres");
-const cuatro = document.getElementById("cuatro");
-const cinco = document.getElementById("cinco");
-const seis = document.getElementById("seis");
-const siete = document.getElementById("siete");
-const ocho = document.getElementById("ocho");
-const nueve = document.getElementById("nueve");
+const one = document.getElementById("one");
+const two = document.getElementById("two");
+const three = document.getElementById("trhee");
+const four = document.getElementById("four");
+const five = document.getElementById("five");
+const six = document.getElementById("six");
+const seven = document.getElementById("seven");
+const eight = document.getElementById("eight");
+const nine = document.getElementById("nine");
 
 const reset = document.getElementById("reset");
 let winner = document.getElementById("winner");
 
 
-uno.addEventListener("click", () => { shoot(uno) });
-dos.addEventListener("click", () => { shoot(dos) });
-tres.addEventListener("click", () => { shoot(tres) });
-cuatro.addEventListener("click", () => { shoot(cuatro) });
-cinco.addEventListener("click", () => { shoot(cinco) });
-seis.addEventListener("click", () => { shoot(seis) });
-siete.addEventListener("click", () => { shoot(siete) });
-ocho.addEventListener("click", () => { shoot(ocho) });
-nueve.addEventListener("click", () => { shoot(nueve) });
+one.addEventListener("click", () => { shoot(one) });
+two.addEventListener("click", () => { shoot(two) });
+three.addEventListener("click", () => { shoot(three) });
+four.addEventListener("click", () => { shoot(four) });
+five.addEventListener("click", () => { shoot(five) });
+six.addEventListener("click", () => { shoot(six) });
+seven.addEventListener("click", () => { shoot(seven) });
+eight.addEventListener("click", () => { shoot(eight) });
+nine.addEventListener("click", () => { shoot(nine) });
 reset.addEventListener("click", resetAll)
 
 function win() {
@@ -107,7 +107,7 @@ function shoot(btn) {
                 }
                 win()
                 if(!endGame) {
-                    winner.textContent = "Empate"
+                    winner.textContent = "Tie"
                 }
             }
         } else {
@@ -126,15 +126,15 @@ function shoot(btn) {
 
 function resetAll (){
     turns = 0;
-    uno.textContent = "";
-    dos.textContent = "";
-    tres.textContent = "";
-    cuatro.textContent = "";
-    cinco.textContent = "";
-    seis.textContent = "";
-    siete.textContent = "";
-    ocho.textContent = "";
-    nueve.textContent = "";
+    one.textContent = "";
+    two.textContent = "";
+    three.textContent = "";
+    four.textContent = "";
+    five.textContent = "";
+    six.textContent = "";
+    seven.textContent = "";
+    eight.textContent = "";
+    nine.textContent = "";
     winner.textContent = "";
     endGame = false;
 }
