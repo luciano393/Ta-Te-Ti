@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 16px;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #333333;
+    flex-direction: column;
+}
+
+.table {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 21rem;
+    justify-content: center;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7rem;
+    width: 7rem;
+    font-size: 6rem;
+    color: whitesmoke;
+    background: transparent;
+    outline: none;
+    border-style: none;
+    font-family: 'Permanent Marker', cursive;
+}
+
+#reset {
+    padding: .5rem;
+    margin-top: 2rem;
+    border-radius: .3rem;
+    cursor: pointer;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.5rem;
+    outline: none;
+    border-style: none;
+    color: whitesmoke;
+    background-color: #333333;
+    border: 3px solid whitesmoke;
+}
+
+#winner {
+    color: whitesmoke;
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    height: 5rem;
+}
+
+.players {
+    position: fixed;
+    left: 2rem;
+    z-index: 1;
+    top: 38%;
+    padding: 2rem;
+    color: whitesmoke;
+}
+
+.players li {
+    list-style: none;
+    font-size: 2.5rem;
+}
+
+#uno, #dos, #tres, #cuatro, #cinco, #seis {
+    border-bottom: 3px solid whitesmoke;
+}
+
+#uno, #dos, #cuatro, #cinco, #siete, #ocho {
+    border-right: 3px solid whitesmoke;
+}
